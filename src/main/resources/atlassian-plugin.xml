@@ -1,0 +1,37 @@
+<atlassian-plugin key="jira-gadget-tutorial-plugin"
+                  name="JIRA Gadget Tutorial Plugin"
+                  pluginsVersion="2">
+    <!-- Contains plugin metadata. -->
+    <plugin-info>
+        <description>A sample plugin showing how to add a gadget to JIRA.</description>
+        <vendor name="Atlassian" url="http://www.atlassian.com"/>
+        <version>1.0</version>
+        <application-version min="4.0"/>
+    </plugin-info>
+
+    <!--
+        Registers the gadget spec as a plugin module. This allows the gadget to
+        appear in the gadget directory and also allows administrators to
+        disable/enable the gadget.
+     -->
+    <gadget key="tutorial-gadget" name="JIRA Tutorial Gadget" location="gadget.xml"/>
+
+    <!-- Makes the gadget Locale messages available for the gadget's use. -->
+    <resource type="download" name="i18n/ALL_ALL.xml" location="i18n/ALL_ALL.xml">
+        <param name="content-type" value="text/xml; charset=UTF-8"/>
+    </resource>
+
+    <!--
+        Automatically finds all JAX-RS resource classes in the plugin and
+        publishes them.
+     -->
+    <rest key="tutorial-gadget-rest-resources" path="/tutorial-gadget" version="1.0">
+        <description>Provides the REST resource for the project list.</description>
+    </rest>
+
+    <!--
+        Imports the SAL UserManager class from JIRA so it can be used by
+        ProjectsResource.
+     -->
+    <component-import key="userManager" interface="com.atlassian.sal.api.user.UserManager"/>
+</atlassian-plugin>

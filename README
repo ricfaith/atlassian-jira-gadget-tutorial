@@ -1,0 +1,10 @@
+Hello!
+
+This project is a tutorial for developers learning to write gadgets for JIRA.
+
+You can find the entire tutorial at:
+
+https://developer.atlassian.com/display/JIRADEV/Plugin+Tutorial+-+Writing+Gadgets+for+JIRA
+
+Addendum:
+RF - Modified original gadget tutorial to work with JIRA 7.1.7.
