@@ -91,6 +91,12 @@
                 <configuration>
                     <productVersion>${jira.version}</productVersion>
                     <testResourcesVersion>${jira.version}</testResourcesVersion>
+                    <enableFastdev>false</enableFastdev>
+                    <pluginArtifact>
+                        <groupId>com.atlassian.labs.plugins</groupId>
+                        <artifactId>quickreload</artifactId>
+                        <version>${quick.reload.version}</version>
+                    </pluginArtifact>
                 </configuration>
             </plugin>
             <plugin>
@@ -109,6 +115,7 @@
         <jira.version>7.1.7</jira.version>
         <amps.version>6.2.4</amps.version>
         <atlassian.spring.scanner.version>1.2.6</atlassian.spring.scanner.version>
+        <quick.reload.version>1.4.4</quick.reload.version>
     </properties>
 
 </project>
