@@ -16,10 +16,7 @@
      -->
     <gadget key="tutorial-gadget" name="JIRA Tutorial Gadget" location="gadget.xml"/>
 
-    <!-- Makes the gadget Locale messages available for the gadget's use. -->
-    <resource type="download" name="i18n/ALL_ALL.xml" location="i18n/ALL_ALL.xml">
-        <param name="content-type" value="text/xml; charset=UTF-8"/>
-    </resource>
+    <resource type="i18n" name="i18n/i18n" location="i18n"/>
 
     <!--
         Automatically finds all JAX-RS resource classes in the plugin and
@@ -28,10 +25,4 @@
     <rest key="tutorial-gadget-rest-resources" path="/tutorial-gadget" version="1.0">
         <description>Provides the REST resource for the project list.</description>
     </rest>
-
-    <!--
-        Imports the SAL UserManager class from JIRA so it can be used by
-        ProjectsResource.
-     -->
-    <component-import key="userManager" interface="com.atlassian.sal.api.user.UserManager"/>
 </atlassian-plugin>

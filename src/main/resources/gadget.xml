@@ -12,7 +12,7 @@
         <Require feature="settitle"/>
         <Require feature="oauthpopup" />
         #oauth
-        <Locale messages="__ATLASSIAN_BASE_URL__/download/resources/jira-gadget-tutorial-plugin/i18n/ALL_ALL.xml"/>
+        #supportedLocales("gadget")
     </ModulePrefs>
     <Content type="html" view="profile">
         <![CDATA[
