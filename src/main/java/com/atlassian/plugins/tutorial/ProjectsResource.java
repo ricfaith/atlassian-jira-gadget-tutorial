@@ -52,9 +52,7 @@ public class ProjectsResource
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
     public Response getProjects(@Context HttpServletRequest request)
     {
-        // get the corresponding com.opensymphony.os.User object for
-        // the request
-        final ApplicationUser user = authenticationContext.getUser();
+        final ApplicationUser user = authenticationContext.getLoggedInUser();
  
         // retrieve all objects for projects this user has permission to browse
         Collection<Project> projects =
